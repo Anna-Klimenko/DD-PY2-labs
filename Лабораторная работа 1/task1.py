@@ -1,6 +1,7 @@
 import doctest
 
 class ChristmasLights:
+    """Базовый класс - Новогодняя гирлянда"""
     def __init__(self, bulbs_number: int, brightness_level: int, color: str):
         """
         Создание и подготовка к работе объекта "Новогодняя гирлянда"
@@ -36,7 +37,7 @@ class ChristmasLights:
         """
         ...
 
-    def add_brightness(self, added_brightness: int) -> None:
+    def add_brightness(self, added_brightness: int) -> int:
         """
         Увеличить уровень яркости гирлянды
         :param added_brightness: Выбранный уровень яркости
@@ -53,6 +54,7 @@ class ChristmasLights:
         ...
 
 class Wireless_Headphones:
+    """Базовый класс - Беспроводные наушники"""
     def __init__(self, charge_percentage: int, battery_time: int):
         """
         Создание и подготовка к работе объекта "Беспроводные наушники"
@@ -76,7 +78,7 @@ class Wireless_Headphones:
             raise ValueError("Время работы батареи не может быть отрицательным числом")
         self.battery_time = battery_time
 
-    def charge_headphones(self, percents) -> None:
+    def charge_headphones(self, percents) -> int:
         """
         Зарядить наушники на определенное число процентов
         :param percents: Число процентов заряда
@@ -92,7 +94,7 @@ class Wireless_Headphones:
             raise ValueError("Число процентов заряда не может быть отрицательным числом")
         ...
 
-    def use_headphones(self, usage_hours) -> None:
+    def use_headphones(self, usage_hours) -> float:
         """
         Воспользоваться наушниками для прослушивания музыки
         :param usage_hours: Количество часов использования наушников
@@ -109,6 +111,7 @@ class Wireless_Headphones:
         ...
 
 class CoursePaper:
+    """Базовый класс - Курсовая работа"""
     def __init__(self, number_of_pages: int, topic: str):
         """
         Создание и подготовка к работе объекта "Курсовая работа"
@@ -125,7 +128,7 @@ class CoursePaper:
         if not isinstance(topic, str):
             raise TypeError("Тема курсовой работы должна быть типа str")
 
-    def write_course_paper(self, written_pages: int) -> None:
+    def write_course_paper(self, written_pages: int) -> int:
         """
         Писать курсовую работу
         :param written_pages: Количество написанных страниц
